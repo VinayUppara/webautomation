@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="8976" started-at="2022-01-17T17:41:03 IST" finished-at="2022-01-17T17:41:12 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="8976" started-at="2022-01-17T17:41:03 IST" finished-at="2022-01-17T17:41:12 IST">
+      <class name="testMethods.BirthdayTest">
+        <test-method status="PASS" signature="booking(java.util.HashMap)[pri:0, instance:testMethods.BirthdayTest@7e38a7fe]" name="booking" duration-ms="5218" started-at="2022-01-17T17:41:04 IST" data-provider="testdata" finished-at="2022-01-17T17:41:09 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{date=2022-01-18}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- booking -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testMethods.BirthdayTest@7e38a7fe]" name="afterMethod" is-config="true" duration-ms="243" started-at="2022-01-17T17:41:09 IST" finished-at="2022-01-17T17:41:10 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=booking status=SUCCESS method=BirthdayTest.booking(java.util.HashMap)[pri:0, instance:testMethods.BirthdayTest@7e38a7fe] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="facebook(java.util.HashMap)[pri:0, instance:testMethods.BirthdayTest@7e38a7fe]" name="facebook" duration-ms="2267" started-at="2022-01-17T17:41:10 IST" data-provider="testdata" finished-at="2022-01-17T17:41:12 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=1234567890, last=kumar, first=vinay, email=test@gmail.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- facebook -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testMethods.BirthdayTest@7e38a7fe]" name="afterMethod" is-config="true" duration-ms="262" started-at="2022-01-17T17:41:12 IST" finished-at="2022-01-17T17:41:12 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=facebook status=SUCCESS method=BirthdayTest.facebook(java.util.HashMap)[pri:0, instance:testMethods.BirthdayTest@7e38a7fe] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testMethods.BirthdayTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
