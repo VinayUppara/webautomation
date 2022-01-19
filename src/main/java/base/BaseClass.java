@@ -155,10 +155,10 @@ public class BaseClass {
 	public void printElementsText(List<WebElement> elements) {
 		
 		
-		for(int i=0;i<10;i++)
+		for(WebElement e : elements)
 		 {
 			
-			System.out.println(elements.get(i).getText());
+			System.out.println(e.getText());
 			
 		}
 		
