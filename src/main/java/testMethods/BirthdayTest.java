@@ -6,9 +6,6 @@ import java.lang.reflect.Method;
 import java.time.Duration;
 import java.util.HashMap;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -19,7 +16,8 @@ import utils.ExcelUtils;
 public class BirthdayTest extends BaseClass {
 
 	HomePage home = new HomePage(driver);
-  
+	
+	
 	/*
 	 * @DataProvider(name="testdata") public Object[][] readData() throws Exception
 	 * {
