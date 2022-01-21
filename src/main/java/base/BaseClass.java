@@ -44,31 +44,31 @@ public class BaseClass {
 
 
 	public static WebDriverWait wait;
-	
+
 	public static ExtentReports report;
-	
+
 	public static ExtentTest logger;
-	
+
 	public static ExtentSparkReporter sparkReporter;
-	
+
 	public static String filePath;
-	
-	
+
+
 	@BeforeTest
 	public void setUp() {
-		
+
 		filePath = "Reports/statusReport.html";
-		
+
 		sparkReporter = new ExtentSparkReporter(filePath);
-		
+
 		report = new ExtentReports();
-		
+
 		report.attachReporter(sparkReporter);
-		
-		
-		
+
+
+
 	}
-	
+
 
 
 	static {
@@ -90,8 +90,8 @@ public class BaseClass {
 
 		driver = new ChromeDriver(options);
 	}
-	
-	
+
+
 
 
 	public static String getProperty(String key) throws FileNotFoundException, IOException {
@@ -183,19 +183,19 @@ public class BaseClass {
 		}
 
 	}
-	
+
 	public void printElementsText(List<WebElement> elements) {
-		
-		
+
+
 		for(WebElement e : elements)
-		 {
-			
+		{
+
 			System.out.println(e.getText());
-			
+
 		}
-		
-		
-		
+
+
+
 	}
 
 	public void dragAndDrop(WebElement drag, WebElement drop) {
@@ -271,13 +271,13 @@ public class BaseClass {
 		if(ITestResult.FAILURE==result.getStatus()) {
 
 			screenShot("FAILURE",result.getName());
-			
+
 			logger.fail("test case "+ result.getName() + " is failed !!!");
 
 		} else {
 
 			screenShot("SUCCESS",result.getName());
-			
+
 			logger.pass(result.getName()+ " is passed!!!1");
 
 		}
@@ -312,13 +312,13 @@ public class BaseClass {
 
 		for(int i=1;i<=rows;i++) {
 			for(int j=0;j<cols;j++) {
-				
+
 				Cell c = sh.getRow(i).getCell(j);
-				
+
 				DataFormatter dataFormatter = new DataFormatter();
-				
+
 				String value = dataFormatter.formatCellValue(c);
-				
+
 				data[i-1][j]=value;
 			}
 		}
@@ -327,9 +327,13 @@ public class BaseClass {
 
 	}
 
+	public void newMethod() {
+		System.out.println("Git dmeo");
+	}
+
 	@AfterTest(enabled=true)
 	public void closeDriver(){
-		
+
 		report.flush();
 
 		driver.close();
