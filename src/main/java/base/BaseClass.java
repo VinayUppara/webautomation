@@ -330,6 +330,11 @@ public class BaseClass {
 	public void newMethod() {
 		System.out.println("Git dmeo");
 	}
+	
+	public void masterMethod() {
+		
+		System.out.println("master method");
+	}
 
 	@AfterTest(enabled=true)
 	public void closeDriver(){
