@@ -33,12 +33,42 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
 public class BaseClass {
 
 	public static WebDriver driver;
 
 
 	public static WebDriverWait wait;
+	
+	public static ExtentReports report;
+	
+	public static ExtentTest logger;
+	
+	public static ExtentSparkReporter sparkReporter;
+	
+	public static String filePath;
+	
+	
+	@BeforeTest
+	public void setUp() {
+		
+		filePath = "Reports/statusReport.html";
+		
+		sparkReporter = new ExtentSparkReporter(filePath);
+		
+		report = new ExtentReports();
+		
+		report.attachReporter(sparkReporter);
+		
+		
+		
+	}
+	
 
 
 	static {
@@ -60,6 +90,8 @@ public class BaseClass {
 
 		driver = new ChromeDriver(options);
 	}
+	
+	
 
 
 	public static String getProperty(String key) throws FileNotFoundException, IOException {
@@ -239,10 +271,14 @@ public class BaseClass {
 		if(ITestResult.FAILURE==result.getStatus()) {
 
 			screenShot("FAILURE",result.getName());
+			
+			logger.fail("test case "+ result.getName() + " is failed !!!");
 
 		} else {
 
 			screenShot("SUCCESS",result.getName());
+			
+			logger.pass(result.getName()+ " is passed!!!1");
 
 		}
 
@@ -289,8 +325,10 @@ public class BaseClass {
 
 	}
 
-	@AfterTest(enabled=false)
+	@AfterTest(enabled=true)
 	public void closeDriver(){
+		
+		report.flush();
 
 		driver.close();
 	}
