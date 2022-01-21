@@ -38,7 +38,12 @@ public class BirthdayTest extends BaseClass {
 	@Test(dataProvider="testdata")
 	public void facebook(HashMap<String,String> data) throws FileNotFoundException, IOException {
 		
+		
+		logger = report.createTest("Facebook create account");
+		
 		driver.get(getProperty("fb"));
+		
+		logger.info("navigated to website "+ driver.getTitle());
 		
 		click(home.createAccount);
 		
@@ -52,17 +57,24 @@ public class BirthdayTest extends BaseClass {
 		
 		setValue(home.fbpassword,data.get("password"));
 		
-		printElementsText(home.hotelNames);
 		
-		
+		//printElementsText(home.hotelNames);
+	
 	
 	}
 
 	@Test(dataProvider="testdata")
 	public void booking(HashMap<String,String> data) throws FileNotFoundException, IOException, InterruptedException {
 
+		
+		logger = report.createTest("Booking website login");
+		
 		driver.get(getProperty("prod"));
-
+		
+		
+		logger.info("Navigated to website "+ driver.getTitle());
+		
+		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		
 		click(home.date);
