@@ -301,8 +301,6 @@ public class BaseClass {
 
 		XSSFSheet sh = wb.getSheet(sheet);
 
-		
-		
 
 		int rows = sh.getLastRowNum();
 
@@ -331,9 +329,9 @@ public class BaseClass {
 		System.out.println("Git dmeo");
 	}
 	
-	public void masterMethod() {
+	public void develop2code() {
 		
-		System.out.println("master method");
+		
 	}
 
 	@AfterTest(enabled=true)
