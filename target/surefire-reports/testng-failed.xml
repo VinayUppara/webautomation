@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]">
+  <test thread-count="5" verbose="0" name="GitDemo(failed)">
+    <classes>
+      <class name="testMethods.BirthdayTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="booking" invocation-numbers="0"/>
+          <include name="closeDriver"/>
+        </methods>
+      </class> <!-- testMethods.BirthdayTest -->
+    </classes>
+  </test> <!-- GitDemo(failed) -->
+</suite> <!-- Failed suite [Suite] -->
