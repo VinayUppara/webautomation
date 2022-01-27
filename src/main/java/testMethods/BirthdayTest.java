@@ -57,10 +57,6 @@ public class BirthdayTest extends BaseClass {
 		
 		setValue(home.fbpassword,data.get("password"));
 		
-		
-		//printElementsText(home.hotelNames);
-	
-	
 	}
 
 	@Test(dataProvider="testdata")
@@ -83,37 +79,6 @@ public class BirthdayTest extends BaseClass {
 		
 		Thread.sleep(2000);
 		
-		
-		
-		
-
-		//driver.manage().window().maximize();
-		
-		
-		//click(home.search);
-		
-		//click(home.checkbox);
-
-		/*
-		 * click(home.signIn);
-		 * 
-		 * setValue(home.enterEmail,"vinay.aftermath@gmail.com");
-		 * 
-		 * click(home.submitEmail);
-		 * 
-		 * waitForElement(home.password);
-		 * 
-		 * setValue(home.password,"Raptor@123");
-		 * 
-		 * click(home.signIn);
-		 * 
-		 * 
-		 * driver.findElement(By.xpath("//span[contains(text(),'Your account')]/../.."))
-		 * .click();
-		 * 
-		 * 
-		 * setValue(home.city,"Hyderabad");
-		 */
 	}
 	
 	
