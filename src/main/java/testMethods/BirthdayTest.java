@@ -63,7 +63,7 @@ public class BirthdayTest extends BaseClass {
 	public void booking(HashMap<String,String> data) throws FileNotFoundException, IOException, InterruptedException {
 
 		
-		logger = report.createTest("Booking website login");
+		logger = report.createTest("Booking login");
 		
 		driver.get(getProperty("prod"));
 		
