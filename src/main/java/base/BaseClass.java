@@ -334,9 +334,6 @@ public class BaseClass {
 		
 	}
 	
-	public void masterMethod() {
-		
-	}
 
 	@AfterTest(enabled=true)
 	public void closeDriver(){
