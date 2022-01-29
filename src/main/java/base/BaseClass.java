@@ -325,7 +325,7 @@ public class BaseClass {
 
 	}
 
-	public void newMethod() {
+	public void mamsterMethod() {
 		System.out.println("Git dmeo");
 	}
 	
