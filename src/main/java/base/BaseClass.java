@@ -329,10 +329,6 @@ public class BaseClass {
 		System.out.println("Git dmeo");
 	}
 	
-	public void develop2code() {
-		
-		
-	}
 	
 
 	@AfterTest(enabled=true)
